@@ -1,0 +1,113 @@
+.menu{
+    background-color: #0984e3;
+}
+.contenido{
+    width: 96%;
+    max-width: 1500px;
+    margin: auto;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenido .seccion-a{
+    width: 50%;
+    height: 100%;
+}
+.contenido .seccion-a .beca{
+    display: none;
+}
+.contenido .seccion-a h1{
+    font-weight: 300;
+    text-align: left;
+    font-size: 1rem;
+}
+.contenido .seccion-a h3{
+    margin-top: 20px;
+}
+.contenido .seccion-a h2{
+    text-align: left;
+    font-weight: 300;
+    font-size: 1rem;
+}
+.contenido .seccion-a form{
+    width: 290px;
+    height: auto;
+    margin-top: 30px;
+}
+.contenido .seccion-a form div{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.contenido .seccion-a form div span{
+    font-size: 1.1rem;
+}
+.contenido .seccion-a form div input{
+    height: 30px;
+    width: 290px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+.contenido .seccion-a form div select{
+    height: 30px;
+    width: 290px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.contenido .seccion-a form .file input{
+    display: none;
+}
+.contenido .seccion-a form .file button{
+    height: 30px;
+    width: 290px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+.contenido .seccion-a form .btnsubmit input{
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #011224;
+    color: #fff;
+    transition: .3s;
+    margin-left: 0px;
+}
+.contenido .seccion-a form .btnsubmit input:hover{
+    letter-spacing: 1px;
+    transition: .3s;
+}
+.contenido .seccion-b{
+    width: 50%;
+    height: 100%;
+}
+.contenido .seccion-b img{
+    width: 100%;
+}
+@media screen and (max-width:640px){
+    .contenido .seccion-a h1{
+        text-align: center;
+    }
+    .contenido{
+        display: grid;
+    }
+    .contenido .seccion-a{
+        width: 100%;
+    }
+    .contenido .seccion-a form{
+        margin: auto;
+        margin-top: 30px;
+    }
+    .contenido .seccion-b{
+        width: 100%;
+        margin-top: 30px;
+    }
+}

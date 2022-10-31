@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+{% include "meta.html" %}
+<link type='text/css' href='{% static "css/general.css" %}' rel='stylesheet'/>
+<link type='text/css' href='{% static "css/contenido.css" %}' rel='stylesheet'/>
+<link type='text/css' href='{% static "css/icons.css" %}' rel='stylesheet'/>
+<link type='text/css' href='{% static "css/swiper-bundle.min.css" %}' rel='stylesheet'/>
+<link type='text/css' href='{% static "css/index.css" %}' rel='stylesheet'/>
+<link type='text/css' href='{% static "css/sheetslider.min.css" %}' rel='stylesheet'/>
+<script src='{% static "js/jquery.min.js" %}'></script>   
+<title>TDI Perú | {% block title %} {% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+	{% include "pie.html" %}
+</body>
+<script src='{% static "js/menu.js" %}'></script>
+<script src='{% static "js/sheetslider.min.js" %}'></script>
+<script src='{% static "js/swiper-bundle.min.js" %}'></script>
+<script>
+	var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+	  slidesPerView: 3,
+      slidesPerGroup: 3,
+      loop: true,
+	  autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('.sub-btn').click(function(){
+        $(this).next('.sub-menu').slideToggle();
+        $(this).find('.icon-down-dir').toggleClass('rotate');
+      });
+      $('.menu-btn').click(function(){
+        $('.side-bar').addClass('active');
+        $('.menu-btn').css("visibility", "hidden");
+      });
+      $('.close-btn').click(function(){
+        $('.side-bar').removeClass('active');
+        $('.menu-btn').css("visibility", "visible");
+      });
+    });
+</script>
+</html>

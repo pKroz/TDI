@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Comprar curso {% endblock %}
+{% block content %}
+{% include "menu.html" %}
+<script src='{% static "js/alertify.min.js" %}'></script>  
+<link type='text/css' href='{% static "css/alertify.min.css" %}' rel='stylesheet'/>
+<link type='text/css' href='{% static "css/dictar.css" %}' rel='stylesheet'/>
+<h1 class="titulo espacio">Comprar curso</h1>
+    <section class="contenido">
+        <div class="seccion-a">
+            <h1>Complete los campos y suba su voucher de pago para contactarlo(a).</h1>
+            <form action="compra-proceso.php" method="POST" autocomplete="off" enctype="multipart/form-data">
+                <div>
+                    <span class="icon-id-card"></span>
+                    <input name="dni" type="text" placeholder="DNI" maxlength="8" minlength="8" onkeypress='return validaNumericos(event)' required>
+                </div>
+                <div>
+                    <span class="icon-user"></span>
+                    <input name="nombres" type="text" placeholder="Nombres" onkeypress="return soloLetras(event)" required>
+                </div>
+                <div>
+                    <span class="icon-user"></span>
+                    <input name="apellidos" type="text" placeholder="Apellidos" onkeypress="return soloLetras(event)" required>
+                </div>
+                <div>
+                    <span class="icon-mail-alt"></span>
+                    <input name="correo" type="email" placeholder="Correo electrónico" required>
+                </div>
+                <div>
+                    <span class="icon-phone"></span>
+                    <input name="celular" type="tel" placeholder="WhatsApp" onkeypress='return validaNumericos(event)' required>
+                </div>
+                <div>
+                    <span class="icon-graduation-cap"></span>
+                    <select name="curso" >
+                    <option value="">Seleccione el curso a comprar</option>
+                        <option value="MERN">MERN</option>
+                        <option value="Fundamentos de AWS">Fundamentos de AWS</option>
+                        <option value="Desarrollo Web">Desarrollo Web</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Sass">Sass</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="React">React</option>
+                        <option value="MySQL Workbench">MySQL Workbench</option>
+                        <option value="GitHub y Git">GitHub y Git</option>
+                        <option value="Angular">Angular</option>
+                        <option value="Desarrollo Móvil">Desarrollo Móvil</option>
+                        <option value="CorelDRAW">CorelDRAW</option>
+                        <option value="Photoshop">Photoshop</option>
+                        <option value="Microsoft Excel">Microsoft Excel</option>
+                        <option value="Figma">Figma</option>
+                    </select>
+                </div>
+                <div>
+                    <span class="icon-credit-card"></span>
+                    <select name="medio" >
+                    <option value="">Seleccione el medio de pago</option>
+                        <option value="Yape">Yape</option>
+                        <option value="BCP">BCP</option>
+                    </select>
+                </div>
+                <div class="file" >
+                    <span class="icon-doc-text-inv"></span>
+                    <input name="voucher" id="file" type="file" onchange="return validarExt()" required>
+                    <button required onclick="document.getElementById('file').click()">Subir Voucher</button>
+                </div>
+                <div class="btnsubmit">
+                    <input type="submit" value="Comprar Curso">
+                </div>
+            </form>
+        </div>
+        <div class="seccion-b">
+            <img src="{% static 'img/etc/svg/0021.svg' %}" alt="Imagen de Compra un Curso o Webinar TDI Perú">
+        </div>
+    </section>
+    <script src='{% static "js/validacion.js" %}'></script>  
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.sub-btn').click(function(){
+            $(this).next('.sub-menu').slideToggle();
+            $(this).find('.icon-down-dir').toggleClass('rotate');
+          });
+          $('.menu-btn').click(function(){
+            $('.side-bar').addClass('active');
+            $('.menu-btn').css("visibility", "hidden");
+          });
+          $('.close-btn').click(function(){
+            $('.side-bar').removeClass('active');
+            $('.menu-btn').css("visibility", "visible");
+          });
+        });
+    </script>
+    <script type="text/javascript">
+        function validarExt(){
+            var archivoInput = document.getElementById('file');
+            var archivoRuta = archivoInput.value;
+            var extPermitidas = /(.)$/i;
+            if(!extPermitidas.exec(archivoRuta)){
+                alertify.error('Hubo un error al momento de subir su voucher.');
+                archivoInput.value = '';
+                return false;
+            }
+            else
+            {
+                if (archivoInput.files && archivoInput.files[0]) 
+                {
+                    var visor = new FileReader();
+                    alertify.success('Su voucher se subió correctamente.');
+                    visor.onload = function(e) 
+                    { 
+                    };
+                    visor.readAsDataURL(archivoInput.files[0]);
+                }
+            }
+        }
+    </script>
+{% endblock %}

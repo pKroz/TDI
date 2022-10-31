@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Workshops {% endblock %}
+{% block content %}
+{% include "menu.html" %}
+<h1 class="titulo espacio">Workshops</h1>
+    <section class="contenido">
+        {% for w in workshops %}
+            <div class="item">
+                <{{w.banner}} alt = "{{w.titlebanner}}">
+                <div class="detalle">
+                    <h3>workshop</h3>
+                    <h1>{{w.titulo}}</h1>
+                    <h2>Dictado por: <span>{{w.ponente}}</span></h2>
+                    <h4>{{w.cargo}}</h4>
+                    <h2>Modalidad: <span>{{w.modalidad}}</span></h2>
+                    <div class="sub">
+                        <div><span class="icon-clock-1"></span><span>{{w.horas}}&nbsp;min</span></div>
+                        <div><span class="icon-thumbs-up-1"></span><span>{{w.calificacion}}</span></div>
+                        <div><span class="icon-eye"></span><span>{{w.vistas}}</span></div>
+                    </div>
+                </div>
+                <div class="btn btnb">
+                    <a {{w.enlace}}>ver más</a>
+                </div>
+            </div>
+        {% endfor %}    
+    </section>
+{% endblock %}

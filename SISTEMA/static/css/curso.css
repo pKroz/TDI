@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+.menu{
+    background-color: #0984e3;
+}
+.contenido{
+    height: auto;
+    width: 96%;
+    max-width: 1500px;
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+}
+.contenido .seccion-a{
+    width: 70%;
+    height: 100%;
+}
+.contenido .seccion-a .title{
+    font-size: 2rem;
+}
+.contenido .seccion-a .description{
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: justify;
+}
+.contenido .seccion-a .ocultar{
+    display: none;
+}
+.contenido .seccion-a .subtitle{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.contenido .seccion-a .imgdocente{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position:center;
+}
+.contenido .seccion-a .imgcertificado{
+    width: 290px;
+}
+.contenido .seccion-a .imgcertificado img{
+    width: 100%;
+}
+.contenido .seccion-a .imgdocente img{
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.contenido .seccion-a .name{
+    font-weight: bold;
+}
+.contenido .seccion-a .silabus{
+    margin-top: 20px;
+}
+.contenido .seccion-a .silabus a{
+    background-color: #0984E3;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: .3s;
+}
+.contenido .seccion-a .silabus a:hover{
+    letter-spacing: 1px;
+    transition: .3s;
+}
+.contenido .seccion-a .comentario{
+    width: 290px;
+    margin-bottom: 10px;
+}
+.contenido .seccion-a .comentario form{
+    display: grid;
+}
+.contenido .seccion-a .comentario form .input{
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+.contenido .seccion-a .comentario form .textarea{
+    padding-top: 10px;
+    height: 150px;
+    max-height: 150px;
+    min-height: 150px;
+    width: 290px;
+    max-width: 290px;
+    min-width: 290px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+.contenido .seccion-a .comentario form .textarea::-webkit-scrollbar{
+    width: 5px;
+    background-color: white;
+}
+.contenido .seccion-a .comentario form .textarea::-webkit-scrollbar-thumb{
+    background-color:#0984e3;
+    border-right: 2px solid #0984e3;
+    border-radius: 20px;
+}
+.contenido .seccion-a .comentario form .btn{
+    background-color: #0984E3;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+    text-align: center;
+    height: 40px;
+    border: none;
+}
+.contenido .seccion-a .comentario form .btn:hover{
+    letter-spacing: 1px;
+    transition: .3s;
+}
+.contenido .seccion-b{
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+}
+.contenido .seccion-b .ventana{
+    height: auto;
+    width: 350px;
+    position: fixed;
+    background-color: #fff;
+    top: 80px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 2px 0px rgb(128 128 128);
+}
+.contenido .seccion-b .ventana .oferta{
+    width: 100%;
+    display: grid;
+}
+.contenido .seccion-b .ventana .oferta .item-a{
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+    display: flex;
+}
+.contenido .seccion-b .ventana .oferta .item-a h1{
+    color: #0984e3;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Odibee Sans', cursive;
+}
+.contenido .seccion-b .ventana .oferta .item-a h1 span{
+    font-size: 1.3rem;
+    font-family: 'Odibee Sans', cursive;
+}
+.contenido .seccion-b .ventana .oferta .item-a h4{
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+.contenido .seccion-b .ventana .oferta .item-b{
+    padding: 5px;
+}
+.contenido .seccion-b .ventana .oferta .item-b h3{
+    font-weight: 300;
+    font-size: 1rem;
+}
+.contenido .seccion-b .ventana .oferta .item-b h3 span{
+    font-weight: bold;
+    text-decoration: line-through;
+}
+.contenido .seccion-b .ventana .time{
+    padding: 5px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.contenido .seccion-b .ventana .time h3{
+    font-weight: 300;
+    font-size: 1rem;
+}
+.contenido .seccion-b .ventana .time span{
+    font-weight: bold;
+}
+.contenido .seccion-b .ventana .btn{
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    display: flex;
+}
+.contenido .seccion-b .ventana .btn a{
+    background-color: #0984e3;
+    color: #fff;
+    padding: 15px;
+    margin: auto;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    transition: .2s;
+}
+.contenido .seccion-b .ventana .btn a:hover{
+    letter-spacing: 1px;
+    transition: .2s;
+    background-color: #097ad1;
+}
+.contenido .seccion-b .ventana .detalle div{
+    display: flex;
+    margin-top: 10px;
+}
+.contenido .seccion-b .ventana .detalle div p{
+    margin-left: 5px;
+}
+.pricemobile{
+    background-color:#011224;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    padding: 10px;
+    display: none;
+}
+.pricemobile .seccion-a{
+    width: 60%;
+    color: #fff;
+}
+.pricemobile .seccion-a div{
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.pricemobile .seccion-a div:nth-child(1){
+    display: grid;
+}
+.pricemobile .seccion-a div h2{
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 400;
+}
+.pricemobile .seccion-a div h3{
+    font-size: 1rem;
+    text-align: left;
+}
+.pricemobile .seccion-a div h4{
+    font-size: .9rem;
+    font-weight: 400;
+    text-align: left;
+}
+.pricemobile .seccion-a div h5{
+    font-size: 1rem;
+    margin-left: 5px;
+    font-weight: bold;
+}
+.pricemobile .seccion-a div h4 span{
+    font-weight: bold;
+}
+.pricemobile .seccion-b{
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.pricemobile .seccion-b a{
+    background-color: #0984e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 20px;
+    width: 200px;
+    border-radius: 5px;
+}
+.pricemobile .seccion-b a span{
+    font-size: 1.2rem;
+}
+.pricemobile .seccion-b a h1{
+    display: flex;
+    font-size: 2rem;
+    font-family: 'Odibee Sans', cursive;
+    margin-left: 10px;
+}
+.pricemobile .seccion-b a h1 p{
+    font-family: 'Odibee Sans', cursive;
+}
+@media screen and (max-width:1280px){
+    .contenido .seccion-a{
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    .contenido .seccion-b{
+        display: none;
+    }
+    .contenido .seccion-b .ventana{
+        display: none !important;
+    }
+    footer{
+        display: none;
+    }
+    .pricemobile{
+        display: flex;
+    }
+    .contenido .seccion-a .ocultar{
+        display: block;
+    }
+}
+@media screen and (max-width:524px){
+    .pricemobile .seccion-a div:nth-child(2){
+        display: none;
+    }
+    .pricemobile{
+        display: grid;
+    }
+    .pricemobile .seccion-a{
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+    }
+    .pricemobile .seccion-a div:nth-child(1){
+        height: 40px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .pricemobile .seccion-b{
+        width: 100%;
+        height: 60px;
+    }
+    .pricemobile .seccion-b a{
+        padding: 10px;
+        margin-top: -8px;
+        width: 150px;
+    }
+    .pricemobile .seccion-b a span{
+        font-size: 1rem;
+    }
+    .pricemobile .seccion-b a h1{
+        font-size: 1rem;
+    }
+}

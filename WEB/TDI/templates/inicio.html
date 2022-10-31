@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Inicio {% endblock %}
+{% block content %}
+{% include "menu.html" %}
+<script type="text/javascript">
+    $(window).scroll(function (event) {
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop >= 10) {
+            document.getElementById('menu').style.background = '#0984e3';
+            document.getElementById('menu').style.transition = '.5s';
+        }
+        if (scrollTop < 10) {
+            document.getElementById('menu').style.background = 'transparent';
+            document.getElementById('menu').style.transition = '.5s';
+        }
+    });
+</script>
+<div class="sheetSlider sh-default sh-auto">
+    <input id="s1" type="radio" name="slide1" checked />
+    <input id="s2" type="radio" name="slide1" />
+    <input id="s3" type="radio" name="slide1" />
+    <input id="s4" type="radio" name="slide1" />
+    <input id="s5" type="radio" name="slide1" />
+    <input id="s6" type="radio" name="slide1" />
+    <div class="sh__content">
+        <div class="sh__item">
+            <div class="back a"></div>
+            <div class="sh__meta">
+          </div>
+        </div>
+        <div class="sh__item">
+            <div class="back b"></div>
+            <div class="sh__meta">
+          </div>
+        </div>
+        <div class="sh__item">
+            <div class="back c"></div>
+            <div class="sh__meta">
+          </div>
+        </div>
+        <div class="sh__item">
+            <div class="back d"></div>
+            <div class="sh__meta">
+          </div>
+        </div>
+        <div class="sh__item">
+            <div class="back e"></div>
+            <div class="sh__meta">
+          </div>
+        </div>
+        <div class="sh__item">
+            <div class="back f"></div>
+            <div class="sh__meta">
+          </div>
+        </div>
+    </div>
+    <div class="sh__btns">
+        <label for="s1"></label>
+        <label for="s2"></label>
+        <label for="s3"></label>
+        <label for="s4"></label>
+        <label for="s5"></label>
+        <label for="s6"></label>
+    </div>
+    <div class="sh__arrows">
+        <label for="s1"></label>
+        <label for="s2"></label>
+        <label for="s3"></label>
+        <label for="s4"></label>
+        <label for="s5"></label>
+        <label for="s6"></label>
+    </div>
+    <button class="sh-control"></button>
+</div>
+<h1 class="titulo">Nuestros cursos y webinars ofrecen:</h1>
+<section class="beneficios">
+    <div class="item">
+        <div>
+            
+            <img src="{% static 'img/etc/svg/0001.svg' %}" alt="Consultorías de TDI PERÚ">
+        </div>
+        <h2>Consultorías</h2>
+        <p>Nuestro equipo de atención al cliente está disponible para atender cualquier duda.</p>
+    </div>
+    <div class="item">
+        <div>
+            <img src="{% static 'img/etc/svg/0002.svg' %}" alt="Recursos de TDI PERÚ">
+        </div>
+        <h2>Recursos</h2>
+        <p>Acceso al 100% a nuestros materiales de clase y herramientas de desarrollo alojadas en la nube.</p>
+    </div>
+    <div class="item">
+        <div>
+            <img src="{% static 'img/etc/svg/0003.svg' %}" alt="Certificado de TDI PERÚ">
+        </div>
+        <h2>Certificado</h2>
+        <p>Al finalizar cada workshop se otorga un certificado validando el aprendizaje obtenido.</p>
+    </div>
+    <div class="item">
+        <div>
+            <img src="{% static 'img/etc/svg/0004.svg' %}" alt="Clases Grabadas de TDI PERÚ">
+        </div>
+        <h2>Clases grabadas</h2>
+        <p>Recuerda lo que hicimos en clase estés donde estés y a la hora que desees.</p>
+    </div>
+</section>
+<h1 class="titulo">Conoce nuestro contenido</h1>
+<section class="detalles">
+    <section class="contenedor">
+        <div class="seccion-a">
+            <h1>Cursos y Webinars</h1>
+            <p><span class="icon-ok"></span>&nbsp;Cursos y webinars con duración +24hrs.</p>
+            <p><span class="icon-ok"></span>&nbsp;Sobre temas y/o habilidades demandandas en el mercado laboral.</p>
+            <p><span class="icon-ok"></span>&nbsp;Incluyen certificados con código único.</p>
+            <p><span class="icon-ok"></span>&nbsp;Docentes con amplia experiencia.</p>
+            <a href="{% url 'cursos' %}">Ver todos los cursos</a>
+        </div>
+        <div class="seccion-b">
+            <img src="{% static 'img/etc/0001.png' %}" alt="Cursos y Webinars de TDI PERÚ">
+        </div>
+    </section>
+    <section class="contenedor">
+        <div class="seccion-a">
+            <h1>Workshops</h1>
+            <p><span class="icon-ok"></span>&nbsp;Workshops con duración +10min.</p>
+            <p><span class="icon-ok"></span>&nbsp;Sobre temas y/o habilidades específicas a desarrollar.</p>
+            <p><span class="icon-ok"></span>&nbsp;Totalmente gratuitos.</p>
+            <p><span class="icon-ok"></span>&nbsp;Docentes con amplia experiencia.</p>
+            <a href="{% url 'workshops' %}">Ver todos los workshops</a>
+        </div>
+        <div class="seccion-b">
+            <img src="{% static 'img/etc/0002.png' %}" alt="Workshops de TDI PERÚ">
+        </div>
+    </section>
+</section>
+<h1 class="titulo">¿Necesitas orientación?</h1>
+<section class="orientacion">
+    <div class="contenedor">
+        <div class="title"><h1>orientación comercial (ventas)</h1></div>
+        <div class="img">
+            <img src="{% static 'img/equipo/0001.png' %}" alt="Foto de César Cárdenas">
+        </div>
+        <h2>César Cárdenas</h2>
+        <h3>CEO TDI PERÚ</h3>
+        <div class="links">
+            <a href="mailto:cesar.cardenas@tdiperu.com">cesar.cardenas@tdiperu.com</a>
+        </div>
+        <div class="links">
+            <a href="tel:+51933896583">+51 933896583</a>
+        </div>
+        <div class="btn">
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=+51933896583&text=Hola%20C%C3%A9sar%20C%C3%A1rdenas,%20necesito%20orientaci%C3%B3n%20comercial.%20Podemos%20reunirnos%20el%20(d%C3%ADa)%20a%20las%20(hora).">agéndame una reunión</a>
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="title"><h1>orientación Académica</h1></div>
+        <div class="img">
+            <img src="{% static 'img/equipo/0002.png' %}" alt="Foto de Kevin Sánchez">
+        </div>
+        <h2>Kevin Sánchez</h2>
+        <h3>CIO TDI PERÚ</h3>
+        <div class="links">
+            <a href="mailto:kevin.sanchez@tdiperu.com">kevin.sanchez@tdiperu.com</a>
+        </div>
+        <div class="links">
+            <a href="tel:+51987147390">+51 987147390</a>
+        </div>
+        <div class="btn">
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=+51987147390&text=Hola%20Kevin%20S%C3%A1nchez,%20necesito%20orientaci%C3%B3n%20acad%C3%A9mica.%20Podemos%20reunirnos%20el%20(d%C3%ADa)%20a%20las%20(hora).">agéndame una reunión</a>
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="title"><h1>orientación técnica</h1></div>
+        <div class="img">
+            <img src="{% static 'img/equipo/0003.png' %}" alt="Foto de Jhonny Quispe">
+        </div>
+        <h2>Jhonny Quispe</h2>
+        <h3>Desarrollador Frontend TDI Perú</h3>
+        <div class="links">
+            <a href="mailto:jhonny.quispe@tdiperu.com">jhonny.quispe@tdiperu.com</a>
+        </div>
+        <div class="links">
+            <a href="tel:+51995807872">+51 995807872</a>
+        </div>
+        <div class="btn">
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=+51995807872&text=Hola%20Jhonny%20Quispe,%20necesito%20orientaci%C3%B3n%20t%C3%A9cnica.%20Podemos%20reunirnos%20el%20(d%C3%ADa)%20a%20las%20(hora).">agéndame una reunión</a>
+        </div>
+    </div>
+</section>
+<h1 class="titulo">¿Qué opinan nuestros alumnos?</h1>
+<section class="testimonios">
+        {% for x in testimonios %}
+        <div class="contenedor">
+            <div class="seccion-a">
+            <span class="icon-quote-left"></span>
+            <h1>{{x.comentario}}</h1>
+            </div>
+            <div class="seccion-b">
+                <h3>{{x.nombre}}</h3>
+            </div>
+        </div>
+        {% endfor %}
+</section>
+{% endblock %}

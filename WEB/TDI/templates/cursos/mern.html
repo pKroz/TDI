@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} MERN {% endblock %}
+{% block content %}
+{% include "menu.html" %}
+<link type='text/css' href='{% static "css/curso.css" %}' rel='stylesheet'/>
+<script type="text/javascript">
+    $(window).scroll(function(event) {
+    var scrollTop = $(window).scrollTop();
+    if(scrollTop >= 1000){
+        document.getElementById('ventana').style.display='none';
+    }
+    if(scrollTop < 1000){
+        document.getElementById('ventana').style.display='block';
+    }
+    });
+</script>
+{% for c in cursos %}
+<section class="contenido">
+    <div class="seccion-a">
+        <h1 class="title">{{c.titulo}}</h1>
+        <p class="description">{{c.descripcion}}</p>
+        <h2 class="subtitle">¿Qué voy a aprender?</h2>
+        <p class="description"><span class="icon-ok"></span> Armar la estructura de tus proyectos con Node y React.</p>
+        <p class="description"><span class="icon-ok"></span> Desarrollar una API.</p>
+        <p class="description"><span class="icon-ok"></span> Guardar las imagenes en un servidor externo.</p>
+        <p class="description"><span class="icon-ok"></span> Utilizar los hooks de React.</p>
+        <p class="description"><span class="icon-ok"></span> SPA en React.</p>
+        <p class="description"><span class="icon-ok"></span> Carga perezosa.</p>
+        <p class="description"><span class="icon-ok"></span> Utilizar los comandos de Git.</p>
+        <p class="description"><span class="icon-ok"></span> Deploy del proyecto en Vercel integrado con GitHub.</p>
+        <p class="description"><span class="icon-ok"></span> Deploy del proyecto en Heroku integrado con GitHub.</p>
+        <p class="description"><span class="icon-ok"></span> Optimizar y escribir código reutilizable.</p>
+        <p class="description"><span class="icon-ok"></span> Utilizar Postman.</p>
+        <p class="description"><span class="icon-ok"></span> Realizar un buen proyecto para el portafolio</p>
+        <p class="description"><span class="icon-ok"></span> Al finalizar tendrás la capacidad para crear más proyectos con este stack</p>
+        <h2 class="subtitle">¿A quién está dirigido?</h2>
+        <p class="description"><span class="icon-user"></span> Estudiantes</p>
+        <p class="description"><span class="icon-suitcase-1"></span> Profesionales</p>
+        <p class="description"><span class="icon-users"></span> Público en General</p>
+        <h2 class="subtitle ocultar">Detalles</h2>
+        <p class="description ocultar"><span class="icon-clock-1"></span> Tiempo total: {{c.horasTotal}} horas</p>
+        <p class="description ocultar"><span class="icon-calendar"></span> Duración: {{c.duracion}} semanas</p>
+        <p class="description ocultar"><span class="icon-clock-1"></span> Tiempo por clase: {{c.horasClase}} horas</p>
+        <p class="description ocultar"><span class="icon-calendar"></span> Clases {{c.clases}} / semana</p>
+        <p class="description ocultar"><span class="icon-heart-2"></span> Certifícate al terminar</p>
+        <p class="description ocultar"><span class="icon-rss"></span> Modalidad: {{c.modalidad}}</p>
+        <p class="description ocultar"><span class="icon-laptop"></span> Medio de Transmisión: Google Meet</p>
+        <p class="description ocultar"><span class="icon-videocam-outline"></span> Clases Grabadas</p>
+        <p class="description ocultar"><span class="icon-cloud-1"></span> Acceso al Repositorio de TDI Perú</p>
+        <h2 class="subtitle">Requisitos</h2>
+        <p class="description"><span class="icon-play"></span> Conocimientos previos de JavaScript.</p>
+        <p class="description"><span class="icon-play"></span> Conocimiento iniciales en React y Node.</p>
+        <p class="description"><span class="icon-play"></span> Se recomienda tener instalado MongoDB, Node, Git, Postman.</p>
+        <p class="description"><span class="icon-play"></span> Tener una cuenta en GitHub.</p>
+        <p class="description"><span class="icon-play"></span> Editor de código preferido, recomiendo VS Code.</p>
+        <h2 class="subtitle">Docente</h2>
+        <div class="imgdocente">
+            <img src= {{c.docentefoto}} alt = "{{c.docentealt}}">
+        </div>
+        <p class="description name">{{c.docente}}</p>
+        <p class="description">{{c.cargo}}</p>
+        <!--
+        <h2 class="subtitle">Sílabus</h2>
+        <div class="silabus">
+            <a href="<?php echo $mostrar['url-silabus']?>" download="<?php echo $mostrar['url-silabus-title']?>">Descargar Sílabus</a>
+        </div>-->
+        <h2 class="subtitle">Certificado</h2>
+        <div class="imgcertificado">
+            <img src="{% static 'img/etc/0011.png' %}" alt="Certificado de TDI PERÚ">
+        </div>
+        <h2 class="subtitle">Déjanos tu comentario</h2>
+        <div class="comentario">
+            <form action="fundamentosaws.php" method="POST" autocomplete="off">
+                <input name="nombres" class="input" type="text" placeholder="Nombre y Apellidos" onkeypress="return soloLetras(event)" required>
+                <textarea name="comentario" class="input textarea" cols="30" rows="10" placeholder="Escribe aquí tu comentario" onkeypress="return soloLetras(event)" required></textarea>
+                <input class="input btn" type="submit" value="Enviar comentario">
+            </form>
+        </div>
+    </div>
+    <div class="seccion-b">
+        <div id="ventana" class="ventana">
+            <div class="oferta">
+                <div class="item-a">
+                    <h1><span>S/ </span>{{c.precioActual}},00</h1>
+                    <h4>{{c.descuento}}% dcto.</h4>
+                </div>
+                <div class="item-b"> 
+                    <h3>Antes: <span>S/{{c.precioOriginal}}.00</span></h3>
+                </div>
+            </div>
+            <div class="time">
+                <h3>Oferta expira en: </h3>
+                <span id="demo" class="parpadeo">OFERTA FINALIZADA</span>
+            </div>
+            <div class="btn">
+                <a href="compra.php">Comprar Ahora</a>
+            </div>
+            <div class="detalle">
+                <div>
+                    <span class="icon-clock-1"></span>
+                    <p>Tiempo total: <span>{{c.horasTotal}} horas</span></p>
+                </div>
+                <div>
+                    <span class="icon-calendar"></span>
+                    <p>Duración: <span>{{c.duracion}} semanas</span></p>
+                </div>
+                <div>
+                    <span class="icon-clock-1"></span>
+                    <p>Tiempo por clase: <span>{{c.horasClase}} horas</span></p>
+                </div>
+                <div>
+                    <span class="icon-calendar"></span>
+                    <p>Clases: <span>{{c.clases}}/semana</span></p>
+                </div>
+                <div>
+                    <span class="icon-heart-2"></span>
+                    <p>Certifícate al terminar</p>
+                </div>
+                <div>
+                    <span class="icon-rss"></span>
+                    <p>Modalidad: {{c.modalidad}}</p>
+                </div>
+                <div>
+                    <span class="icon-laptop"></span>
+                    <p>Medio de Transmisión: Google Meet</p>
+                </div>
+                <div>
+                    <span class="icon-videocam-outline"></span>
+                    <p>Clases Grabadas</p>
+                </div>
+                <div>
+                    <span class="icon-cloud-1"></span>
+                    <p>Acceso al Repositorio de TDI Perú</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pricemobile">
+    <div class="seccion-a">
+        <div>
+            <h3>{{c.descuento}}% - dcto.</h3>
+            <h4>Antes: <span>S/{{c.precioOriginal}}.00</span></h4>
+        </div>
+        <div>
+            <h2>Oferta expira en:</h2>
+            <h5 id="demob" class="parpadeo">OFERTA FINALIZADA</h5>
+        </div>
+    </div>
+    <div class="seccion-b">
+        <a href="compra.php">
+            <span class="icon-basket-1"></span>
+            <h1><p>S/</p>{{c.precioActual}}.00</h1>
+        </a>
+    </div>
+</section>
+{% endfor %}
+<script src='{% static "js/menu.js" %}'></script>   
+<script src='{% static "js/validacion.js" %}'></script>   
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('.sub-btn').click(function(){
+        $(this).next('.sub-menu').slideToggle();
+        $(this).find('.icon-down-dir').toggleClass('rotate');
+      });
+      $('.menu-btn').click(function(){
+        $('.side-bar').addClass('active');
+        $('.menu-btn').css("visibility", "hidden");
+      });
+      $('.close-btn').click(function(){
+        $('.side-bar').removeClass('active');
+        $('.menu-btn').css("visibility", "visible");
+      });
+    });
+</script>
+{% endblock %}

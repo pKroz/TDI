@@ -1,0 +1,231 @@
+.menu{
+    background-color: #0984e3;
+}
+.text{
+    text-align: center;
+    font-weight: 400;
+    width: 50%;
+    font-size: 1rem;
+    margin: auto;
+}
+.menu{
+    background-color: #0984e3;
+}
+.contenido{
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    grid-template-columns: 50% 50%;
+    display: grid;
+}
+.contenido .item{
+    width: 290px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 0px rgb(128 128 128);
+    margin: auto;
+    margin-bottom: 45px;
+}
+.contenido .item img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.contenido .item .detalle{
+    width: 100%;
+    padding: 0px 10px;
+    padding-top: 5px;
+}
+.contenido .item .detalle h3{
+    text-transform: uppercase;
+    background-color: #27ae60;
+    width: 100px;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: .7rem;
+    border-radius: 20px;
+    text-align: center;
+}
+.contenido .item .detalle h1{
+    color: #000;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+.contenido .item .detalle h2{
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 10px;
+} 
+.contenido .item .detalle h2 span{
+    font-weight: 600;
+}
+.contenido .item .detalle h4{
+    font-size: 0.8rem;
+    margin-top: 5px;
+    font-weight: 400;
+}
+.contenido .item  .btn{
+    margin-top: 15px;
+    height: 40px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.contenido .item  .btn a{
+    background-color: white;
+    color: #000;
+    transition: .3s;
+    font-size: .9rem;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0px 0px 1px 0px rgb(128 128 128);
+}
+.contenido .item  .btn a:hover{
+    background-color: #0984e3;
+    color: #fff;
+    transition: .3s;
+}
+.modal{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    transform: translateY(-100%);
+    transition: .5s;
+    padding-top: 60px;
+    z-index: 10000;
+}
+.modal.active{
+    transform: translateY(0%);
+    transition: 0.5s;
+}
+.modal.cerrar{
+    transform: translateY(-100%);
+    transition: 0.5s;
+}
+.modal .contenedor{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal .contenedor video{
+    height: 450px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.modal .contenedor form{
+    width: 290px;
+    height: 450px;
+    padding: 10px;
+    padding-top: 30px;
+    background-color: #0984e3;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.modal .contenedor form .icon-cancel-1{
+    background-color: #fff;
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    margin-top: -20px;
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+.modal .contenedor form div{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.modal .contenedor form div span{
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+.modal .contenedor form div input{
+    height: 25px;
+    width: 240px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.modal .contenedor form div textarea{
+    width: 240px;
+    height: 100px;
+    max-height: 100px;
+    min-height: 100px;
+    max-width: 240px;
+    min-width: 240px;
+    border-radius: 10px;
+    border: none;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.modal .contenedor form div select{
+    height: 25px;
+    width: 240px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+.modal .contenedor form .btnsubmit input{
+    background-color: #0A3D62;
+    color: #fff;
+    height: 35px;
+    width: 100%;
+    margin-left: 0px;
+    cursor: pointer;
+}
+.modal .contenedor form .file input{
+    display: none;
+}
+.modal .contenedor form .file button{
+    height: 25px;
+    width: 240px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+    background-color: #fff;
+}
+@media screen and (max-width:650px){
+    .contenido{
+        grid-template-columns: 100%;
+    }
+}
+@media screen and (max-width:570px){
+    .modal .contenedor video{
+        display: none;
+    }
+    .modal .contenedor form{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
