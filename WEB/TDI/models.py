@@ -61,3 +61,6 @@ class pagos(models.Model):
 class comentarios(models.Model):
     nombre = models.CharField(max_length=5000)
     comentario = models.CharField(max_length=50000)
+    dia = models.CharField(max_length=4)
+    mes = models.CharField(max_length=4)
+    anio = models.CharField(max_length=4)

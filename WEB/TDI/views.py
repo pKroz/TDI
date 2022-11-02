@@ -24,6 +24,17 @@ def pMern(request):
         com = comentarios()
         com.nombre = request.POST.get('nombre')
         com.comentario  = request.POST.get('comentario')
+        now = datetime.datetime.now()
+        year = now.year
+        month = now.month
+        day = now.day
+        if len(str(day)) == 1 :
+            day = "0" + str(day)
+        if len(str(month)) == 1 :
+            month = "0" + str(month)
+        com.dia = day
+        com.mes = month
+        com.anio = year
         com.save()
         return redirect('/gracias')
     return render(request,"cursos/mern.html", {"cursos": cursosListados})
@@ -34,6 +45,17 @@ def pDesarrolloWEB(request):
         com = comentarios()
         com.nombre = request.POST.get('nombre')
         com.comentario  = request.POST.get('comentario')
+        now = datetime.datetime.now()
+        year = now.year
+        month = now.month
+        day = now.day
+        if len(str(day)) == 1 :
+            day = "0" + str(day)
+        if len(str(month)) == 1 :
+            month = "0" + str(month)
+        com.dia = day
+        com.mes = month
+        com.anio = year
         com.save()
         return redirect('/gracias')
     return render(request,"cursos/desarrollo-web.html", {"cursos": cursosListados})
@@ -44,6 +66,17 @@ def pFundamentosAWS(request):
         com = comentarios()
         com.nombre = request.POST.get('nombre')
         com.comentario  = request.POST.get('comentario')
+        now = datetime.datetime.now()
+        year = now.year
+        month = now.month
+        day = now.day
+        if len(str(day)) == 1 :
+            day = "0" + str(day)
+        if len(str(month)) == 1 :
+            month = "0" + str(month)
+        com.dia = day
+        com.mes = month
+        com.anio = year
         com.save()
         return redirect('/gracias')
     return render(request,"cursos/fundamentos-aws.html", {"cursos": cursosListados})
@@ -58,7 +91,6 @@ def pCompra(request):
         day = "0" + str(day)
     if len(str(month)) == 1 :
         month = "0" + str(month)
-
     if request.method =='POST':
         c = pagos()
         c.dni = request.POST.get('dni')
