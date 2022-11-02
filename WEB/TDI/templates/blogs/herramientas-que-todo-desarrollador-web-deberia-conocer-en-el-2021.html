@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Blogs {% endblock %}
+{% block content %}
+{% include "menu.html" %}
+<link rel="stylesheet" href='{% static "css/blog.css" %}'/>
+<script src='{% static "js/jquery.min.js" %}'></script>
+{% for b in blogs %}
+<h1 class="titulo espacio title-blog">{{b.titulo}}</h1>
+    <section class="contenido">
+        <h2>Fecha de Publicación: <span>{{b.fechapublicacion}}</span></h2>
+        <h2>Tiempo de Lectura: <span>{{b.tiempolectura}}</span></h2>
+        <div class="autor">
+            <img src= {{b.fotoautor}}>
+            <h2>{{b.autor}}</h2>
+        </div>
+        <h2>Palabras Claves:</h2>
+        <div class="keys">
+            <h3>herramientas</h3>
+            <h3>tecnología</h3>
+            <h3>desarrollo web</h3>
+            <h3>desarrollador</h3>
+            <h3>ingeniería web</h3>
+        </div>
+        <p class="parrafo">No ha pasado mucho tiempo desde que los desarrolladores web y el consecuente desarrollo de proyectos basados en tecnologías web se ha ido popularizando considerablemente. Hemos podido reconocer el nacimiento de nuevas tecnologías y herramientas espectaculares como React o la preferencia de aplicar los diseños responsive, por otro lado, aún seguimos viendo a nuestros viejos compañeros de desarrollo como jQuery que no han parado y han seguido evolucionando y mejorando con el paso del tiempo.</p>
+        <p class="parrafo">Actualmente podemos tener acceso a cientos de bibliotecas, frameworks y conjuntos de herramientas que nos ayudan a ser más productivos en nuestro flujo de trabajo y así poder obtener resultados en tiempos muchos más óptimos y con un menor esfuerzo de lo que se estimaba hace algún tiempo atrás. Incluso tenemos la posibilidad de colaborar de forma remota en proyectos con gran facilidad gracias a los nuevos sistemas de control de versiones sorprendentemente eficiente, hasta los navegadores nos proporcionan soluciones y herramientas que amplían todavía más las posibilidades de desarrollo.</p>
+        <p class="parrafo">Podemos tomarnos todo el día y enumerar cada una de las herramientas y es que hay tantas posibilidades y opciones, pues sabemos que en el mundo de desarrollo y programación el aprendizaje es constante y en muchas ocasiones puede ser abrumador el mantenerse al día. Pero, ¡No temas!, para facilitarte el trabajo hoy te hemos seleccionado las mejores herramientas que debes usar como desarrollador web. A continuación, te presentamos una lista:</p>
+        <ul class="lista">
+            <li class="icon-ok"><a target="_blank" href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+            <li class="icon-ok"><a target="_blank" href="https://developer.chrome.com/">Chrome Developers Tools</a></li>
+            <li class="icon-ok"><a target="_blank" href="https://jquery.com/">jQuery</a></li>
+            <li class="icon-ok"><a target="_blank" href="https://git-scm.com/">Git</a></li>
+            <li class="icon-ok"><a target="_blank" href="https://www.npmjs.com/">npm</a></li>
+            <li class="icon-ok"><a target="_blank" href="https://www.typescriptlang.org/">TypeScript</a></li>
+            <li class="icon-ok"><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a></li>
+            <li class="icon-ok"><a target="_blank" href="https://angular.io/">Angular</a></li>
+            <li class="icon-ok"><a target="_blank" href="https://sass-lang.com/">Sass</a></li>
+        </ul>
+        <div class="banner">
+            <{{b.banner}} alt = "{{b.banneralt}}">
+        </div>
+        <h1 class="cabecera">Visual Studio Code</h1>
+        <p class="parrafo">Arrancamos por lo más obvio: un editor de código fuente. Por años Sublime Text estuvo reinando y a día de hoy sigue siendo uno de los editores de código más usados, hasta que en 2014 apareció Atom con su propuesta basada en Electron. Microsoft reconoció el potencial de Atom y decidió seguir el mismo camino lanzando Visual Studio Code, también basado en Electron para implementar Chromium y Node.js, pero sin usar el editor Atom: emplea Monaco, el mismo de Visual Studio Team Services. También trae Git integrado, herramientas de debug increíblemente útiles, una amplia variedad de extensiones y plugins.</p>
+        <div class="banner">
+            <img src="{% static 'img/blog/etc/0001.png' %}" alt="Banner de Visual Studio Code">
+        </div>
+        <h1 class="cabecera">Chrome Developers Tools</h1>
+        <p class="parrafo">Casi siempre deseamos poder editar HTML y CSS en tiempo real o depurar JavaScript mientras analizamos el comportamiento de nuestro sitio web o proyecto, pero o bien hemos de recurrir a módulos de Node, o hemos de montar un entorno de desarrollo específicamente para ese propósito. Con Chrome Developer Tools nada de eso es necesario, pues se trata de un conjunto de herramientas para desarrolladores que se encuentran integradas en todos los navegadores Chrome que nos permiten mejorar los tiempos de carga y a conseguir una mejor optimización de nuestro proyecto.</p>
+        <div class="banner">
+            <img src="{% static 'img/blog/etc/0002.png' %}" alt="Banner de Chrome Developers Tools">
+        </div>
+        <h1 class="cabecera">jQuery</h1>
+        <p class="parrafo">JavaScript es por excelencia un lenguaje de programación front-end pero a día de hoy sigue presentando unos pequeños dolores de cabeza: incompatibilidades en ciertos navegadores, sintaxis complejas, y un consumo de recursos en ocasiones elevado. Todo esto cambió a partir del 2006 con la aparición de jQuery, una pequeña librería JavaScript que mejora notablemente todas sus funcionalidades. jQuery es rápido y práctico, pero sobre todo es multiplataforma, diseñado para simplificar la programación front-end de cualquier proyecto. Más de 10 años después sigue siendo una de las librerías de JavaScript más populares, hasta el punto que incluso WordPress empezó a implementarlo como un estándar de su infraestructura con la llegada de Gutenberg.</p>
+        <div class="banner">
+            <img src="{% static 'img/blog/etc/0003.png' %}" alt="Banner de jQuery">
+        </div>
+        <h1 class="cabecera">Git</h1>
+        <p class="parrafo">Imagínate realizar cambios importantes en tu proyecto y que por A o B pierdas todo tu progreso: nunca empieces un proyecto nuevo sin usar un repositorio Git primero. Si eres nuevo en Git (no confundir con GitHub) nunca es tarde para iniciarse por primera vez especialmente si vas a trabajar con Visual Studio Code: podremos aprovechar al máximo su integración con el control de versiones y de repositorios. Y realmente Git es sencillo de usar una vez lo tengamos instalado en nuestro equipo.</p>
+        <div class="banner">
+            <img src="{% static 'img/blog/etc/0004.png' %}" alt="Banner de Git">
+        </div>
+        <h1 class="cabecera">npm</h1>
+        <p class="parrafo">npm es útil para construir cosas fascinantes a través de herramientas esenciales de JavaScript. Tiene la capacidad de gestionar equipos, no es necesario configurar, y proporciona auditorías de seguridad. En ese sentido para empresas es capaz de ofrecer características de seguridad, desarrollos sin duplicar, soporte y un control de acceso tremendamente útil. Entre sus características nos permite instalar una infinidad de paquetes de código abierto con una amplía biblioteca donde hay miles de expansiones públicas y de todo tipo por descubrir. Gracias a su soporte recibiremos advertencias automáticas si nos topamos ante cualquier código inseguro, por lo cual no hay mucho peligro de que acabemos instalando un módulo que contenga software peligroso para nuestro equipo.</p>
+        <div class="banner">
+            <img src="{% static 'img/blog/etc/0005.png' %}" alt="Banner de npm">
+        </div>
+        <h1 class="cabecera">TypeScript</h1>
+        <p class="parrafo">TypeScript se trata de un superconjunto escrito a partir de JavaScript, en otras palabras, nos compilará JavaScript en un código más simple. Es compatible con cualquier navegador, con cualquier host y con todos los sistemas operativos, y entre sus posibilidades tiene una buena convergencia con JavaScript nativo: podemos seguir trabajando con nuestro código JavaScript normal y llamar a TypeScript dentro de él.</p>
+        <div class="banner">
+            <img src="{% static 'img/blog/etc/0006.png' %}" alt="Banner de TypeScript">
+        </div>
+        <h1 class="cabecera">Bootstrap</h1>
+        <p class="parrafo">Si lo que buscamos es la mayor eficiencia y rapidez a la hora de desarrollar proyectos puramente front-end, o tal vez agilizar el front-end para priorizar el back-end, entonces Bootstrap te será muy útil. Básicamente Bootstrap nos permitirá estructurar toda la maquetación de tu proyecto mediante elementos comunes y reutilizables reduciendo drásticamente las horas de trabajo que dediquemos a nuestro proyecto.</p>
+        <div class="banner">
+            <img src="{% static 'img/blog/etc/0007.png' %}" alt="Banner de Bootstrap">
+        </div>
+        <h1 class="cabecera">Angular</h1>
+        <p class="parrafo">Desarrollado por Google y lanzado en 2011, Angular nos permite ampliar la sintaxis de HTML en un entorno mucho más expresivo y fácilmente legible. Nos ayuda a desarrollar más rápido y a diseñar aspectos que de otra manera no podríamos construir en HTML básico.</p>
+        <div class="banner">
+            <img src="{% static 'img/blog/etc/0008.png' %}" alt="Banner de Angular">
+        </div>
+        <h1 class="cabecera">Sass</h1>
+        <p class="parrafo">SASS es un preprocesador de CSS que nos permitirá escribir nuestros estilos CSS con un código mucho más compacto, eficiente y corto, sin repetir en exceso una y otra vez las mismas reglas y estilos. Es un proyecto de código abierto que arrancó en 2006 y acabó por redefinir completamente la manera en la que empleamos CSS moderno para estilizar nuestros proyectos. Al comienzo puede ser un poco complejo de comprender, pero una vez le tomemos el gusto será difícil no vivir sin el uso de las variables, los mixins o de anidar estilos en bloques. Además, las hojas de estilos de SASS ofrecen una mejor legibilidad de nuestros estilos, y aún más importante, compila directamente en CSS comprimido.</p>
+        <div class="banner">
+            <img src="{% static 'img/blog/etc/0009.png' %}" alt="Banner de Sass">
+        </div>
+    </section>
+    {% endfor %}
+    <div class="compartir">
+        <a class='copi' id='getlink' href='javascript:void();'><span class="icon-heart-1"></span> compartir artículo</a>
+    </div>
+<script src='{% static "js/menu.js" %}'></script>
+<script src='{% static "js/expandir.js" %}'></script>
+<script src='{% static "js/compartir.js" %}'></script>
+{% endblock %}

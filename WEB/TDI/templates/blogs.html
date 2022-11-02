@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Blogs {% endblock %}
+{% block content %}
+{% include "menu.html" %}
+<link rel="stylesheet" href='{% static "css/contenido.css" %}'/>
+<script src='{% static "js/jquery.min.js" %}'></script>
+<h1 class="titulo espacio">Blogs</h1>
+    <section class="contenido">
+        {% for b in blogs %}
+            <div class="item">
+                
+                <{{b.banner}} alt = "{{b.banneralt}}">
+                <div class="detalle">
+                    <div class="descripcion">
+                        <p>{{b.descripcion}}</p>
+                    </div>
+                    <h2>Redactado por: <span>{{b.autor}}</span></h2>
+                </div>
+                <div class="btn">
+                    <a class="btnbeca" href="{{b.url}}">leer artículo</a>
+                </div>
+            </div>
+        {% endfor %} 
+    </section>
+<script src='{% static "js/menu.js" %}'></script>
+<script src='{% static "js/expandir.js" %}'></script>  
+{% endblock %}

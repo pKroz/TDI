@@ -35,4 +35,7 @@ urlpatterns = [
     path('cursos/mern/', pMern, name="mern"),
     path('cursos/desarrollo-web/', pDesarrolloWEB, name="desarrollo-web"),
     path('cursos/fundamentos-aws/', pFundamentosAWS, name="fundamentos-aws"),
+    #Blogs
+    path('blogs/', pBlogs, name="blogs"),
+    path('blogs/herramientas-que-todo-desarrollador-web-deberia-conocer-en-el-2021/', pBlog1, name="blog1"),
 ]

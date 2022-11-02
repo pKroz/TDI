@@ -77,3 +77,15 @@ class postulaciones(models.Model):
     dia = models.CharField(max_length=4)
     mes = models.CharField(max_length=4)
     anio = models.CharField(max_length=4)
+
+class blogs(models.Model):
+    banner = models.CharField(max_length=5000)
+    banneralt = models.CharField(max_length=5000)
+    titulo = models.CharField(max_length=5000)
+    descripcion = models.CharField(max_length=5000)
+    fechapublicacion = models.CharField(max_length=5000)
+    tiempolectura = models.CharField(max_length=5000)
+    url = models.CharField(max_length=5000)
+    autor = models.CharField(max_length=5000)
+    autoralt = models.CharField(max_length=5000)
+    fotoautor = models.CharField(max_length=5000)
