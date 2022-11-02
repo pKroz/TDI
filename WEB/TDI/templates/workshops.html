@@ -3,6 +3,8 @@
 {% block title %} Workshops {% endblock %}
 {% block content %}
 {% include "menu.html" %}
+<link type='text/css' href='{% static "css/contenido.css" %}' rel='stylesheet'/>
+<script src='{% static "js/jquery.min.js" %}'></script>   
 <h1 class="titulo espacio">Workshops</h1>
     <section class="contenido">
         {% for w in workshops %}

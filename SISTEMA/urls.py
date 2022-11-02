@@ -25,6 +25,8 @@ urlpatterns = [
     path('', inicio, name="inicio"),
     path('workshops/', pWorkshops, name="workshops"),
     path('compra/', pCompra, name="compra"),
+    path('trabaja-con-nosotros/', pPostular, name="trabaja-con-nosotros"),
+    path('terminos-y-condiciones/', pTerminos, name="terminos-y-condiciones"),
     #Cursos
     path('cursos/', pCursos, name="cursos"),
     path('cursos/mern/', pMern, name="mern"),

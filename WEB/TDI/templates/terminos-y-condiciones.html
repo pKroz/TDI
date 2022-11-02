@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Términos y Condiciones {% endblock %}
+{% block content %}
+"{% static 'img/etc/0008.png' %}"
+{% include "menu.html" %}
+<link rel="stylesheet" href='{% static "css/politicas-terminos.css" %}'/>
+<script src='{% static "js/jquery.min.js" %}'></script>
+<h1 class="titulo espacio">Términos y Condiciones</h1>
+    <section class="contenido">
+        <main>
+            <div class="preguntas">
+                <div class="contenedor-preguntas activo" data-categoria="metodos-pago">
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">1. Descripción del sitio<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">TDI Perú es una consultora educativa para personas que quieren aprender habilidades tecnológicas de profesionales en el mercado. Dentro de TDI Perú los usuarios pueden comprar cursos, webinars y/o workshops online, compartir proyectos personales, contribuir y aprender en foros de discusión.<br></p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">2. Acceso y utilización del Sitio Web<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Los usuarios podrán disfrutar de todas las funcionalidades y servicios que ofrece la plataforma, desde que se ingresan y opten por algun curso, webinar o workshop.<br>El acceso y el uso de la plataforma sólo podrá ser realizado por aquellas personas que conforme a la legislación aplicable tengan capacidad de ejercicio plena para celebrar actos jurídicos. En caso que, algún menor de edad, quiera acceder a los servicios que ofrezca la plataforma, los que ejerzan la patria potestad o tutores de los menores de edad o de aquellas personas reputadas por las Leyes Vigentes como sujetos de derecho con incapacidad absoluta serán responsables por los actos realizados por estos últimos.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">3. Uso correcto de la Plataforma<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">La Plataforma podrá ser utilizada únicamente con fines lícitos y que no transgredan las buenas costumbres y/o el presente documento.<br>El usuario se compromete a utilizar la plataforma con fines lícitos y que no transgredan el ordenamiento jurídico, el orden público y las buenas costumbres. En ese sentido, a título meramente enunciativo, pero no limitativo, el usuario se abstendrá de:<br><strong>a.</strong> Abusar, acosar, amenazar, suplantar o intimidar a cualquier persona.<br><strong>b.</strong> Intentar acceder o realizar búsquedas en motores de búsquedas o softwares (spiders, robots, crawlers, herramientas de minería de datos o similares) distintos de aquellos provistos por TDI Perú o aquellos motores de búsquedas genéricos provistos por terceros y de acceso público la Internet.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">4. Tarifas<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">TDI Perú es la única entidad que puede variar los precios de los cursos, webinars y/o workshops.<br> TDI Perú puede cambiar los precios sin previo aviso, ya que es autor y propietario de todo el contenido.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">5. Atención al público<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">La Atención al público se dará mediante las redes sociales que se muestran en la plataforma, la atención es de 10:00 am a 6:00 pm de Lunes a Viernes.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+<script src='{% static "js/menu.js" %}'></script>
+<script src='{% static "js/expandir.js" %}'></script>  
+{% endblock %}

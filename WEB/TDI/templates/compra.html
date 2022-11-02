@@ -6,7 +6,7 @@
 <script src='{% static "js/alertify.min.js" %}'></script>  
 <link type='text/css' href='{% static "css/alertify.min.css" %}' rel='stylesheet'/>
 <link type='text/css' href='{% static "css/dictar.css" %}' rel='stylesheet'/>
-<h1 class="titulo espacio">Comprar curso</h1>
+<h1 class="titulo espacio">Comprar Curso</h1>
     <section class="contenido">
         <div class="seccion-a">
             <h1>Complete los campos y suba su voucher de pago para contactarlo(a).</h1>
@@ -51,7 +51,7 @@
                 </div>
                 <div>
                     <span class="icon-doc-text-inv"></span>
-                    <input name="voucher" type="tel" placeholder="Insertar link del comprobante" required>
+                    <input name="voucher" type="url" placeholder="Insertar link del comprobante" required>
                 </div>
                 <div class="btnsubmit">
                     <input type="submit" value="Comprar Curso">
@@ -63,22 +63,4 @@
         </div>
     </section>
     <script src='{% static "js/validacion.js" %}'></script>  
-    <script type="text/javascript">
-        $(document).ready(function(){
-          $('.sub-btn').click(function(){
-            $(this).next('.sub-menu').slideToggle();
-            $(this).find('.icon-down-dir').toggleClass('rotate');
-          });
-          $('.menu-btn').click(function(){
-            $('.side-bar').addClass('active');
-            $('.menu-btn').css("visibility", "hidden");
-          });
-          $('.close-btn').click(function(){
-            $('.side-bar').removeClass('active');
-            $('.menu-btn').css("visibility", "visible");
-          });
-        });
-    </script>
-    <script type="text/javascript">
-    </script>
 {% endblock %}

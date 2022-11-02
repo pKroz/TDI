@@ -107,4 +107,33 @@ def pCompra(request):
         c.save()
         return redirect('/gracias')
     return render(request,"compra.html", {"cursos": cursosListados})
+
+def pPostular(request):
+    now = datetime.datetime.now()
+    year = now.year
+    month = now.month
+    day = now.day
+    if len(str(day)) == 1 :
+        day = "0" + str(day)
+    if len(str(month)) == 1 :
+        month = "0" + str(month)
+    if request.method =='POST':
+        p = postulaciones()
+        p.nombres = request.POST.get('nombres')
+        p.apellidos  = request.POST.get('apellidos')
+        p.correo = request.POST.get('correo')
+        p.celular = request.POST.get('celular')
+        p.sitio = request.POST.get('sitio')
+        p.comentario = request.POST.get('comentario')
+        p.puesto = request.POST.get('puesto')
+        p.cv = request.POST.get('cv')
+        p.dia = day
+        p.mes = month
+        p.anio = year
+        p.save()
+        return redirect('/gracias')
+    return render(request,"trabaja-con-nosotros.html", {})
+
+def pTerminos(request):
+    return render(request,"terminos-y-condiciones.html", {})
     

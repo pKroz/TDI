@@ -3,6 +3,10 @@
 {% block title %} Cursos y Webinars {% endblock %}
 {% block content %}
 {% include "menu.html" %}
+
+<link rel="stylesheet" href='{% static "css/contenido.css" %}'/>
+<script src='{% static "js/jquery.min.js" %}'></script>
+
 <h1 class="titulo espacio">Cursos y Webinars</h1>
     <section class="contenido">
         {% for c in cursos %}

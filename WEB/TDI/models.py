@@ -64,3 +64,16 @@ class comentarios(models.Model):
     dia = models.CharField(max_length=4)
     mes = models.CharField(max_length=4)
     anio = models.CharField(max_length=4)
+
+class postulaciones(models.Model):
+    nombres = models.CharField(max_length=5000)
+    apellidos  = models.CharField(max_length=5000)
+    correo = models.CharField(max_length=5000)
+    celular = models.CharField(max_length=5000)
+    sitio = models.CharField(max_length=5000)
+    comentario = models.CharField(max_length=5000)
+    puesto = models.CharField(max_length=5000)
+    cv = models.CharField(max_length=5000)
+    dia = models.CharField(max_length=4)
+    mes = models.CharField(max_length=4)
+    anio = models.CharField(max_length=4)
