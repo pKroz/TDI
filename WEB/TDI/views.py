@@ -4,6 +4,7 @@ from django.template.loader import *
 from django.template import *
 from django.http import *
 from django.contrib import messages
+import datetime
 # Create your views here.
 def inicio(request):
     testimoniosListados = testimonios.objects.all()[:9]
@@ -49,6 +50,15 @@ def pFundamentosAWS(request):
 
 def pCompra(request):
     cursosListados = cursos.objects.all()
+    now = datetime.datetime.now()
+    year = now.year
+    month = now.month
+    day = now.day
+    if len(str(day)) == 1 :
+        day = "0" + str(day)
+    if len(str(month)) == 1 :
+        month = "0" + str(month)
+
     if request.method =='POST':
         c = pagos()
         c.dni = request.POST.get('dni')
@@ -59,6 +69,9 @@ def pCompra(request):
         c.curso = request.POST.get('curso')
         c.medio = request.POST.get('medio')
         c.voucher = request.POST.get('voucher')
+        c.dia = day
+        c.mes = month
+        c.anio = year
         c.save()
         return redirect('/gracias')
     return render(request,"compra.html", {"cursos": cursosListados})

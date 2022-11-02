@@ -54,6 +54,9 @@ class pagos(models.Model):
     curso = models.CharField(max_length=5000)
     medio = models.CharField(max_length=5000)
     voucher = models.CharField(max_length=5000)
+    dia = models.CharField(max_length=4)
+    mes = models.CharField(max_length=4)
+    anio = models.CharField(max_length=4)
 
 class comentarios(models.Model):
     nombre = models.CharField(max_length=5000)
