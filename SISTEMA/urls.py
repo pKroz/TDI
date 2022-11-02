@@ -32,6 +32,8 @@ urlpatterns = [
     path('politicas-de-privacidad/', pPoliticas, name="politicas-de-privacidad"),
     path('dictar-workshop/', pDictarWorkshop, name="dictar-workshop"),
     path('dictar-curso/', pDictarCurso, name="dictar-curso"),
+    path('comunidad/', pComunidad, name="comunidad"),
+    path('gracias/', pGracias, name="gracias"),
     #Cursos
     path('cursos/', pCursos, name="cursos"),
     path('cursos/mern/', pMern, name="mern"),

@@ -87,6 +87,11 @@ def pPreguntas(request):
 def pPoliticas(request):
     return render(request,"politicas-de-privacidad.html", {})
 
+def pComunidad(request):
+    return render(request,"comunidad.html", {})
+
+def pGracias(request):
+    return render(request,"gracias.html", {})
 
 def pMern(request):
     cursosListados = cursos.objects.all().filter(titulo="MERN")

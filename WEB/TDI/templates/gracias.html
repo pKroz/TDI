@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Gracias {% endblock %}
+{% block content %}
+{% include "menu.html" %}
+<link rel="stylesheet" href='{% static "css/gracias.css" %}'/>
+<script src='{% static "js/jquery.min.js" %}'></script>
+<h1 class="titulo espacio">Gracias</h1>
+    <section class="contenido">
+        <h1>MENSAJE ENVIADO SATISFACTORIAMENTE</h1>
+        <h2>Un asesor especializado se encargará de comunicarse con usted a través de los dos medios que indico en el formulario.</h1>
+        <div>
+          <img src="{% static 'img/etc/svg/0019.svg' %}" alt="Imagen de Comunidad TDI Perú">
+        </div>
+    </section>
+<script src='{% static "js/menu.js" %}'></script>
+<script src='{% static "js/expandir.js" %}'></script>  
+{% endblock %}

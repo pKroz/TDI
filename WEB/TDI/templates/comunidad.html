@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Comunidad {% endblock %}
+{% block content %}
+{% include "menu.html" %}
+<link rel="stylesheet" href='{% static "css/comunidad.css" %}'/>
+<script src='{% static "js/jquery.min.js" %}'></script>
+<h1 class="titulo espacio">Comunidad</h1>
+    <section class="contenido">
+        <h1>Estimados usuarios, le invitamos a unirse a nuestra Comunidad TDI Perú.</h1>
+        <h1>Le informaremos sobre nuevas publicaciones, artículos en nuestro Blog, lanzamientos de nuevos cursos, webinars, ofertas laborales y más.</h1>
+        <div>
+            <a target="_blank" href="https://chat.whatsapp.com/GyjuSssXViD6ZIN9UHszrw">Únase al grupo de WhatsApp y reciba beneficios</a>
+        </div>
+        <div>
+          <img src="{% static 'img/etc/svg/0019.svg' %}" alt="Imagen de Comunidad TDI Perú">
+        </div>
+    </section>
+<script src='{% static "js/menu.js" %}'></script>
+<script src='{% static "js/expandir.js" %}'></script>  
+{% endblock %}
