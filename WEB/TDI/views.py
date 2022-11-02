@@ -136,4 +136,7 @@ def pPostular(request):
 
 def pTerminos(request):
     return render(request,"terminos-y-condiciones.html", {})
+
+def pNosotros(request):
+    return render(request,"nosotros.html", {})
     

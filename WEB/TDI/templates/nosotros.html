@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Términos y Condiciones {% endblock %}
+{% block content %}
+"{% static 'img/etc/0008.png' %}"
+{% include "menu.html" %}
+<link rel="stylesheet" href='{% static "css/sobre-tdi.css" %}'/>
+<script src='{% static "js/jquery.min.js" %}'></script>
+<h1 class="titulo espacio">Sobre TDI Perú</h1>
+  <h2 class="text">Somos una empresa dedicada a la consultoría y educación en tecnologías de cloud computing, tecnologías de desarrollo y más. </h2>
+	<h1 class="titulo">Nuestra Misión</h1>
+  <h2 class="text">Posicionarnos y ser referencia tecnológica en el mercado peruano para el 2022.</h2>
+  <h2 class="text">Garantizar un servicio educativo de calidad con tecnología y modalidades flexibles al usuario.</h2>
+  <div class="img">
+    
+    <img src="{% static 'img/etc/0007.jpg' %}" alt="Fotografía de la Misión de TDI Perú">
+  </div>
+  <h1 class="titulo">Nuestra Visión</h1>
+  <h2 class="text">Ser la empresa líder en consultoría y educativa de tecnologías de información, desarrollo de software y cloud computing.</h2>
+  <div class="img">
+    <img src="{% static 'img/etc/0006.jpg' %}" alt="Fotografía de la Visión de TDI Perú">
+  </div>
+<script src='{% static "js/menu.js" %}'></script>
+<script src='{% static "js/expandir.js" %}'></script>  
+{% endblock %}
