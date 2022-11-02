@@ -8,12 +8,15 @@ from django.contrib import messages
 def inicio(request):
     testimoniosListados = testimonios.objects.all()[:9]
     return render(request,"inicio.html", {"testimonios": testimoniosListados})
+
 def pCursos(request):
     cursosListados = cursos.objects.all()
     return render(request,"cursos.html", {"cursos": cursosListados})
+
 def pWorkshops(request):
     workshopsListados = workshops.objects.all()
     return render(request,"workshops.html", {"workshops": workshopsListados})
+
 def pMern(request):
     cursosListados = cursos.objects.all().filter(titulo="MERN")
     if request.method =='POST':
@@ -23,6 +26,7 @@ def pMern(request):
         com.save()
         return redirect('/gracias')
     return render(request,"cursos/mern.html", {"cursos": cursosListados})
+
 def pDesarrolloWEB(request):
     cursosListados = cursos.objects.all().filter(titulo="Desarrollo Web")
     if request.method =='POST':
@@ -31,7 +35,18 @@ def pDesarrolloWEB(request):
         com.comentario  = request.POST.get('comentario')
         com.save()
         return redirect('/gracias')
-    return render(request,"cursos/desarrolloweb.html", {"cursos": cursosListados})
+    return render(request,"cursos/desarrollo-web.html", {"cursos": cursosListados})
+
+def pFundamentosAWS(request):
+    cursosListados = cursos.objects.all().filter(titulo="Fundamentos de AWS")
+    if request.method =='POST':
+        com = comentarios()
+        com.nombre = request.POST.get('nombre')
+        com.comentario  = request.POST.get('comentario')
+        com.save()
+        return redirect('/gracias')
+    return render(request,"cursos/fundamentos-aws.html", {"cursos": cursosListados})
+
 def pCompra(request):
     cursosListados = cursos.objects.all()
     if request.method =='POST':

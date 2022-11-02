@@ -23,11 +23,11 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio, name="inicio"),
-    path('cursos/', pCursos, name="cursos"),
     path('workshops/', pWorkshops, name="workshops"),
-    path('cursos/mern/', pMern, name="mern"),
-    path('cursos/desarrolloweb/', pDesarrolloWEB, name="desarrolloweb"),
     path('compra/', pCompra, name="compra"),
+    #Cursos
+    path('cursos/', pCursos, name="cursos"),
+    path('cursos/mern/', pMern, name="mern"),
+    path('cursos/desarrollo-web/', pDesarrolloWEB, name="desarrollo-web"),
+    path('cursos/fundamentos-aws/', pFundamentosAWS, name="fundamentos-aws"),
 ]
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
