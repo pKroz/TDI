@@ -12,7 +12,6 @@
             <h1>Complete los campos y suba su voucher de pago para contactarlo(a).</h1>
             <form action="" method="POST" autocomplete="off" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form.as_p }}
                 <div>
                     <span class="icon-id-card"></span>
                     <input name="dni" type="text" placeholder="DNI" maxlength="8" minlength="8" onkeypress='return validaNumericos(event)' required>

@@ -54,3 +54,7 @@ class pagos(models.Model):
     curso = models.CharField(max_length=5000)
     medio = models.CharField(max_length=5000)
     voucher = models.CharField(max_length=5000)
+
+class comentarios(models.Model):
+    nombre = models.CharField(max_length=5000)
+    comentario = models.CharField(max_length=50000)

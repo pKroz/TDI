@@ -60,19 +60,15 @@
         </div>
         <p class="description name">{{c.docente}}</p>
         <p class="description">{{c.cargo}}</p>
-        <!--
-        <h2 class="subtitle">Sílabus</h2>
-        <div class="silabus">
-            <a href="<?php echo $mostrar['url-silabus']?>" download="<?php echo $mostrar['url-silabus-title']?>">Descargar Sílabus</a>
-        </div>-->
         <h2 class="subtitle">Certificado</h2>
         <div class="imgcertificado">
             <img src="{% static 'img/etc/0011.png' %}" alt="Certificado de TDI PERÚ">
         </div>
         <h2 class="subtitle">Déjanos tu comentario</h2>
         <div class="comentario">
-            <form action="fundamentosaws.php" method="POST" autocomplete="off">
-                <input name="nombres" class="input" type="text" placeholder="Nombre y Apellidos" onkeypress="return soloLetras(event)" required>
+            <form action="" method="POST" autocomplete="off" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input name="nombre" class="input" type="text" placeholder="Nombre y Apellidos" onkeypress="return soloLetras(event)" required>
                 <textarea name="comentario" class="input textarea" cols="30" rows="10" placeholder="Escribe aquí tu comentario" onkeypress="return soloLetras(event)" required></textarea>
                 <input class="input btn" type="submit" value="Enviar comentario">
             </form>
@@ -94,7 +90,7 @@
                 <span id="demo" class="parpadeo">OFERTA FINALIZADA</span>
             </div>
             <div class="btn">
-                <a href="compra.php">Comprar Ahora</a>
+                <a href="{% url 'compra' %}">Comprar Ahora</a>
             </div>
             <div class="detalle">
                 <div>
@@ -149,7 +145,7 @@
         </div>
     </div>
     <div class="seccion-b">
-        <a href="compra.php">
+        <a href="{% url 'compra' %}">
             <span class="icon-basket-1"></span>
             <h1><p>S/</p>{{c.precioActual}}.00</h1>
         </a>

@@ -16,9 +16,21 @@ def pWorkshops(request):
     return render(request,"workshops.html", {"workshops": workshopsListados})
 def pMern(request):
     cursosListados = cursos.objects.all().filter(titulo="MERN")
+    if request.method =='POST':
+        com = comentarios()
+        com.nombre = request.POST.get('nombre')
+        com.comentario  = request.POST.get('comentario')
+        com.save()
+        return redirect('/gracias')
     return render(request,"cursos/mern.html", {"cursos": cursosListados})
 def pDesarrolloWEB(request):
     cursosListados = cursos.objects.all().filter(titulo="Desarrollo Web")
+    if request.method =='POST':
+        com = comentarios()
+        com.nombre = request.POST.get('nombre')
+        com.comentario  = request.POST.get('comentario')
+        com.save()
+        return redirect('/gracias')
     return render(request,"cursos/desarrolloweb.html", {"cursos": cursosListados})
 def pCompra(request):
     cursosListados = cursos.objects.all()
