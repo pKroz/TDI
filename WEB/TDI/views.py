@@ -142,3 +142,6 @@ def pNosotros(request):
 
 def pPreguntas(request):
     return render(request,"preguntas-frecuentes.html", {})
+
+def pPoliticas(request):
+    return render(request,"politicas-de-privacidad.html", {})

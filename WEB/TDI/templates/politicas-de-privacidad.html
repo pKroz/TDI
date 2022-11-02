@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Políticas de Privacidad {% endblock %}
+{% block content %}
+"{% static 'img/etc/0008.png' %}"
+{% include "menu.html" %}
+<link rel="stylesheet" href='{% static "css/politicas-terminos.css" %}'/>
+<script src='{% static "js/jquery.min.js" %}'></script>
+<h1 class="titulo espacio">Políticas de Privacidad</h1>
+    <section class="contenido">
+        <main>
+            <div class="preguntas">
+                <div class="contenedor-preguntas activo" data-categoria="metodos-pago">
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">1. Disposiciones Generales<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Tecnologías de Información (TDI Perú), quiere ofrecerles la mejor experiencia a través de su servicio; por esa razón, nos interesa cuidar la privacidad de nuestros usuarios, poniendo a disposición el presente documento ("Políticas de Privacidad") para informar acerca de las políticas y procedimientos relacionados al tratamiento de la información y datos personales que recopila de usuarios a través del sitio web de TDI Perú. <br> Los usuarios que accedan a nuestros servicios a través del sitio web, aceptan sujetarse a las disposiciones de esta Política, aceptan que se recopile su información personal a través de cuestionarios, registros, formularios electrónicos, entre otros otorgados y/o requeridos virtualmente y autorizan a TDI Perú a hacer uso y realizar el tratamiento de toda la información que brinde a TDI Perú. Cabe mencionar, que la presente política forma parte integrante de los Términos y Condiciones en <a target="_blank" href="{% url 'terminos-y-condiciones' %}">Términos y Condiciones</a>.<br>TDI Perú se reserva el derecho a modificar la Política de Privacidad, lo cual será comunicado vía correo electrónico con razonable anticipación a su entrada en vigencia.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">2. Definiciones<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Sin perjuicio de los términos definidos en diversas secciones del presente documento, los términos aquí utilizados con la primera letra mayúscula y que no sean definidos de forma diversa, tendrán el significado que a continuación se les atribuye, pudiendo ser utilizados en masculino, femenino o neutro, así como en singular o en plural, indistintamente y según el contexto:<br><strong>Cookie:</strong> Es el archivo de datos que se almacena en el dispositivo del usuario cuando éste tiene acceso al Sitio.<br><strong>Encargado de Tratamiento:</strong> Persona natural o persona jurídica que recopile, almacene, conserve, utilice, bloquee o suprima datos personales de los Usuarios por encargo de TDI Perú, en virtud de una relación jurídica que le vincula con el mismo y delimita el ámbito de su actuación.<br><strong>Usuario:</strong> Aquella persona natural, persona natural con negocio, o persona jurídica que compran cursos o webinars en la plataforma ofrecidos por TDI Perú.<br><strong>Información Personal:</strong> Permite identificar y/o hacer identificable al usuario; tal como, sus nombres, apellidos, número de DNI, número de teléfono, correo electrónico, entre otros, que TDI Perú considere conveniente solicitar, a fin de poder brindar los servicios y/o productos ofrecidos en la plataforma de manera adecuada.<br><strong>Información General:</strong> Por sí misma, no permite identificar al usuario, pero que podrá ser requerida por TDI Perú para brindar sus cursos y/o webinars.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">3. ¿Qué información recolectamos?<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Para comprar cursos y/o webinar recolectamos su DNI, nombres, apellidos, correo electrónico y número de celular.<br>En otros casos (postulaciones) recolectamos sus datos personales y CV para su próxima evaluación.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">4. ¿Para qué utilizamos los datos de usuario?<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Los datos de los usuarios son usados para comunicarnos via WhatsApp, correo electrónico, llamadas telefónicas y agregarlos a las carpetas compartidas con los materiales de clase.<br>En otro casos (postulaciones) se usa para evaluar el CV y hacer una próxima entrevista laboral.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">5. Sobre las medidas de seguridad<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">TDI Perú garantiza la protección de los datos personales del usuario y evita su alteración, pérdida, tratamiento y/o acceso no autorizado, habida cuenta de la naturaleza de los datos almacenados y los riesgos a que están expuestos.<br>TDI Perú emplea diversas medidas de seguridad para evitar accesos no autorizados, malos usos o divulgación con tecnología y procesos utilizados en la industria. Sin perjuicio de ello, TDI Perú no se hace responsable por interceptaciones ilegales o violación de sus sistemas o bases de datos por parte de personas no autorizadas, así como la indebida utilización de la información obtenida por esos medios, o de cualquier intromisión ilegítima que escape al control de TDI Perú y que no le sea imputable.<br>De igual manera, TDI Perú no asume responsabilidad alguna por los posibles daños, multas o acciones legales que se pudieran ocasionar con motivo del incumplimiento de las obligaciones de los servidores externos contratados para la plataforma.<br>Adicionalmente, la plataforma de TDI Perú puede contener enlaces a otros sitios web, sin embargo, no asume responsabilidad por el contenido de las políticas de privacidad y/o prácticas de otros sitios web. Cuando un usuario acceda a un enlace que lo redirija a otro sitio web, éste deberá aceptar y sujetarse a la política de privacidad de dicho sitio web.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">6. Sobre la Veracidad de los Datos Personales<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Cada Usuario es responsable por la veracidad, exactitud, vigencia y autenticidad de la información suministrada, y se compromete a mantenerla debidamente actualizada. Sin perjuicio de lo anterior, el usuario autoriza a TDI Perú, si así lo considera pertinente, a verificar la veracidad de los Datos Personales facilitados, a través de información obtenida de fuentes de acceso público o de entidades especializadas en la provisión de dicha información.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">7. Actualización de la Política<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">TDI Perú se reserva expresamente el derecho a modificar y/o actualizar en cualquier momento la presente política, de acuerdo a las modificaciones o exigencias de la regulación o por adecuaciones propias del servicio realizadas a criterio de TDI Perú.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">8. Contacto<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">TDI Perú acepta todo tipo de duda, queja o comentario con respecto a las Políticas de Privacidad. Envíenos un correo al <a href="mailto:contacto@tdiperu.com">contacto@tdiperu.com</a> o escríbanos al <a target="_blank" href="https://api.whatsapp.com/send?phone=+51987147390&text=Hola,%20somos%20TDI%20Per%C3%BA%20%C2%BFEn%20que%20podemos%20ayudarte?">987147390</a></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+<script src='{% static "js/menu.js" %}'></script>
+<script src='{% static "js/expandir.js" %}'></script>  
+{% endblock %}
