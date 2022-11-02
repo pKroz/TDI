@@ -139,4 +139,6 @@ def pTerminos(request):
 
 def pNosotros(request):
     return render(request,"nosotros.html", {})
-    
+
+def pPreguntas(request):
+    return render(request,"preguntas-frecuentes.html", {})

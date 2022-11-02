@@ -27,6 +27,7 @@ urlpatterns = [
     path('compra/', pCompra, name="compra"),
     path('nosotros/', pNosotros, name="nosotros"),
     path('trabaja-con-nosotros/', pPostular, name="trabaja-con-nosotros"),
+    path('preguntas-frecuentes/', pPreguntas, name="preguntas-frecuentes"),
     path('terminos-y-condiciones/', pTerminos, name="terminos-y-condiciones"),
     #Cursos
     path('cursos/', pCursos, name="cursos"),

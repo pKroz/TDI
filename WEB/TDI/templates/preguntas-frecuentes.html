@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Términos y Condiciones {% endblock %}
+{% block content %}
+"{% static 'img/etc/0008.png' %}"
+{% include "menu.html" %}
+<link rel="stylesheet" href='{% static "css/politicas-terminos.css" %}'/>
+<script src='{% static "js/jquery.min.js" %}'></script>
+<h1 class="titulo espacio">Preguntas Frecuentes</h1>
+    <section class="contenido">
+        <main>
+            <div class="preguntas">
+                <div class="contenedor-preguntas activo">
+                    <div class="contenedor-pregunta">
+                        
+                        <p class="pregunta">1. ¿Cómo compro un curso?<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Para comprar un curso debes hacer clic en el siguiente enlace: <a target="_blank" href="{% url 'compra' %}">Comprar Aquí</a>, luego ingresas tus datos personales:<br><strong>a.</strong> DNI<br><strong>b.</strong>Nombres<br><strong>c.</strong> Apellidos<br><strong>d.</strong> Correo Electrónico<br><strong>e.</strong> Número de Celular<br><strong>f.</strong> Escoge el curso a comprar<br><strong>g.</strong> Escoge como deseas pagar (Yape, BCP).<br><strong>h.</strong> Adjuntas tu voucher de depósito<br><strong>i.</strong> Aceptas los Términos y Condiciones<br> Finalmente envias tus datos y posteriormente nos contáctaremos contigo.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">2. ¿Donde veo los materiales de clase?<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Los materiales de clase estarán disponible en una carpeta compartida en la nube. El docente te dará acceso.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">3. ¿Cómo postular a las ofertas laborales de TDI Perú?<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Para postular a las ofertas laborales debes ingresar al siguiente enlace: <a target="_blank" href="trabaja-con-nosotros.php">Clic Aquí</a> y completar los datos solicitados.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">4. ¿Cómo dictar un curso o webinar?<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Para dictar un curso o webinar debes ingresar al siguiente enlace: <a target="_blank" href="dicta-curso.php">Clic Aquí</a> y completar los datos solicitados.</p> 
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">5. ¿Cómo ser colaborador en TDI Perú?<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Para ser colaborador debes ingresar al siguiente enlace: <a target="_blank" href="dicta-workshop.php">Clic Aquí</a> y completar los datos solicitados.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">6. ¿Cómo ser colaborador en el Blog de TDI Perú?<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Para ser colaborador en el Blog TDI Perú debes contactarte con el siguiente número: <a target="_blank" href="https://api.whatsapp.com/send?phone=+51987147390&text=Hola,%20somos%20TDI%20Per%C3%BA%20%C2%BFEn%20que%20podemos%20ayudarte?">+51 987147390</a>.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">7. ¿Cómo unirme a la Comunidad de TDI Perú?<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Para unirte a la Comunidad de TDI Perú debes ingresar al siguiente enlace: <a target="_blank" href="comunidad.php">Clic Aquí</a> e ingresar al grupo de WhatsApp.</p>
+                    </div>
+                    <div class="contenedor-pregunta">
+                        <p class="pregunta">8. ¿Cómo valido mi certificado de TDI Perú?<img src="{% static 'img/etc/svg/0020.svg' %}" alt="Abrir Respuesta" /></p>
+                        <p class="respuesta">Para validar tu certificado TDI Perú debes ingresar al siguiente enlace: <a target="_blank" href="certificado.php">Clic Aquí</a> e ingresar el código ubicado en la parte inferior - derecha de tu certificado.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+<script src='{% static "js/menu.js" %}'></script>
+<script src='{% static "js/expandir.js" %}'></script>  
+{% endblock %}
