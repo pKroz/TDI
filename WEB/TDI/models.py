@@ -1,4 +1,6 @@
 from django.db import models
+import datetime
+import os
 
 # Create your models here.
 
@@ -51,4 +53,4 @@ class pagos(models.Model):
     celular = models.CharField(max_length=5000)
     curso = models.CharField(max_length=5000)
     medio = models.CharField(max_length=5000)
-    voucher = models.ImageField(upload_to="pagos/",null=True, blank=True)
+    voucher = models.CharField(max_length=5000)

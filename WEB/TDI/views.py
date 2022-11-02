@@ -1,10 +1,9 @@
 from django.shortcuts import redirect, render
 from .models import *
-from .forms import *
 from django.template.loader import *
 from django.template import *
 from django.http import *
-import mimetypes
+from django.contrib import messages
 # Create your views here.
 def inicio(request):
     testimoniosListados = testimonios.objects.all()[:9]
@@ -22,18 +21,18 @@ def pDesarrolloWEB(request):
     cursosListados = cursos.objects.all().filter(titulo="Desarrollo Web")
     return render(request,"cursos/desarrolloweb.html", {"cursos": cursosListados})
 def pCompra(request):
+    cursosListados = cursos.objects.all()
     if request.method =='POST':
-        dni = request.POST['dni']
-        nombres = request.POST['nombres']
-        apellidos  = request.POST['apellidos']
-        correo = request.POST['correo']
-        celular = request.POST['celular']
-        curso = request.POST['curso']
-        medio = request.POST['medio']
-        
-
-        nueva_compra = pagos(dni=dni, nombres=nombres, apellidos=apellidos,correo=correo
-        , celular=celular, curso=curso, medio=medio,)
-        nueva_compra.save()
-    return render(request,"compra.html", {})
+        c = pagos()
+        c.dni = request.POST.get('dni')
+        c.nombres = request.POST.get('nombres')
+        c.apellidos  = request.POST.get('apellidos')
+        c.correo = request.POST.get('correo')
+        c.celular = request.POST.get('celular')
+        c.curso = request.POST.get('curso')
+        c.medio = request.POST.get('medio')
+        c.voucher = request.POST.get('voucher')
+        c.save()
+        return redirect('/gracias')
+    return render(request,"compra.html", {"cursos": cursosListados})
     
