@@ -88,8 +88,6 @@ def pPoliticas(request):
     return render(request,"politicas-de-privacidad.html", {})
 
 
-
-
 def pMern(request):
     cursosListados = cursos.objects.all().filter(titulo="MERN")
     if request.method =='POST':
@@ -152,6 +150,57 @@ def pFundamentosAWS(request):
         com.save()
         return redirect('/gracias')
     return render(request,"cursos/fundamentos-aws.html", {"cursos": cursosListados})
+
+def pDictarWorkshop(request):
+    if request.method =='POST':
+        dw = dictar_workshop()
+        dw.nombres = request.POST.get('nombres')
+        dw.apellidos  = request.POST.get('apellidos')
+        dw.correo  = request.POST.get('correo')
+        dw.celular  = request.POST.get('celular')
+        dw.area  = request.POST.get('area')
+        dw.otro  = request.POST.get('otro')
+        dw.cv  = request.POST.get('cv')
+        now = datetime.datetime.now()
+        year = now.year
+        month = now.month
+        day = now.day
+        if len(str(day)) == 1 :
+            day = "0" + str(day)
+        if len(str(month)) == 1 :
+            month = "0" + str(month)
+        dw.dia = day
+        dw.mes = month
+        dw.anio = year
+        dw.save()
+        return redirect('/gracias')
+    return render(request,"dictar-workshop.html", {})
+
+def pDictarCurso(request):
+    if request.method =='POST':
+        dc = dictar_curso()
+        dc.nombres = request.POST.get('nombres')
+        dc.apellidos  = request.POST.get('apellidos')
+        dc.correo  = request.POST.get('correo')
+        dc.celular  = request.POST.get('celular')
+        dc.area  = request.POST.get('area')
+        dc.otro  = request.POST.get('otro')
+        dc.cv  = request.POST.get('cv')
+        now = datetime.datetime.now()
+        year = now.year
+        month = now.month
+        day = now.day
+        if len(str(day)) == 1 :
+            day = "0" + str(day)
+        if len(str(month)) == 1 :
+            month = "0" + str(month)
+        dc.dia = day
+        dc.mes = month
+        dc.anio = year
+        dc.save()
+        return redirect('/gracias')
+    return render(request,"dictar-curso.html", {})
+
 
 def pBlog1(request):
     blogsListados = blogs.objects.all().filter(id="1")

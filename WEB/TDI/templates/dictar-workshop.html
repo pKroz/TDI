@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Dictar un Workshop {% endblock %}
+{% block content %}
+{% include "menu.html" %}
+<link rel="stylesheet" href='{% static "css/dictar.css" %}'/>
+<link rel="stylesheet" href='{% static "css/alertify.min.css" %}'/>
+<script src='{% static "js/jquery.min.js" %}'></script>
+<script src='{% static "js/alertify.min.js" %}'></script>
+
+<h1 class="titulo espacio">Dictar un Workshop</h1>
+    <section class="contenido">
+        <div class="seccion-a">
+            <h1>Complete los campos y envie su postulación para entrevistarlo(a).</h1>
+            <form action="" method="POST" autocomplete="off" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div>
+                    <span class="icon-user"></span>
+                    <input name="nombres" type="text" placeholder="Nombres" onkeypress="return soloLetras(event)" required>
+                </div>
+                <div>
+                    <span class="icon-user"></span>
+                    <input name="apellidos" type="text" placeholder="Apellidos" onkeypress="return soloLetras(event)" required>
+                </div>
+                <div>
+                    <span class="icon-mail-alt"></span>
+                    <input name="correo" type="email" placeholder="Correo electrónico" required>
+                </div>
+                <div>
+                    <span class="icon-phone"></span>
+                    <input name="celular" type="tel" placeholder="Celular" maxlength="9" minlength="9" onkeypress='return validaNumericos(event)' required>
+                </div>
+                <div>
+                    <span class="icon-graduation-cap"></span>
+                    <select name="area" >
+                        <option value="">Seleccione el área a dictar</option>
+                        <option value="Desarrollo Web">Desarrollo Web</option>
+                        <option value="Desarrollo Móvil">Desarrollo Móvil</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                        <option value="Inteligencia Artificial">Inteligencia Artificial</option>
+                        <option value="Diseño UI">Diseño UI</option>
+                        <option value="Diseño UX">Diseño UX</option>
+                        <option value="Seguridad Informática">Seguridad Informática</option>
+                        <option value="Big Data">Big Data</option>
+                        <option value="Blockchain">Blockchain</option>
+                        <option value="Internet de las cosas">Internet de las cosas</option>
+                        <option value="Realidad Virtual y Aumentada">Realidad Virtual y Aumentada</option>
+                    </select>
+                </div>
+                <div>
+                    <span class="icon-play"></span>
+                    <input name="otro" type="text" placeholder="Otro">
+                </div>
+                <div>
+                    <span class="icon-doc-text-inv"></span>
+                    <input name="cv" type="url" placeholder="Insertar link del comprobante" required>
+                </div>
+                <div class="btnsubmit">
+                    <input type="submit" value="Enviar Postulación">
+                </div>
+            </form>
+        </div>
+        <div class="seccion-b">
+            <img src="{% static 'img/etc/svg/0004.svg' %}" alt="Imagen de Dicta un workshop TDI Perú">
+        </div>
+    </section>
+<script src='{% static "js/menu.js" %}'></script>
+<script src='{% static "js/validacion.js" %}'></script>  
+{% endblock %}

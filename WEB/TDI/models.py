@@ -89,3 +89,27 @@ class blogs(models.Model):
     autor = models.CharField(max_length=5000)
     autoralt = models.CharField(max_length=5000)
     fotoautor = models.CharField(max_length=5000)
+
+class dictar_workshop(models.Model):
+    nombres = models.CharField(max_length=5000)
+    apellidos = models.CharField(max_length=5000)
+    correo = models.CharField(max_length=5000)
+    celular = models.CharField(max_length=5000)
+    area = models.CharField(max_length=5000)
+    otro = models.CharField(max_length=5000)
+    cv = models.CharField(max_length=5000)
+    dia = models.CharField(max_length=4)
+    mes = models.CharField(max_length=4)
+    anio = models.CharField(max_length=4)
+
+class dictar_curso(models.Model):
+    nombres = models.CharField(max_length=5000)
+    apellidos = models.CharField(max_length=5000)
+    correo = models.CharField(max_length=5000)
+    celular = models.CharField(max_length=5000)
+    area = models.CharField(max_length=5000)
+    otro = models.CharField(max_length=5000)
+    cv = models.CharField(max_length=5000)
+    dia = models.CharField(max_length=4)
+    mes = models.CharField(max_length=4)
+    anio = models.CharField(max_length=4)

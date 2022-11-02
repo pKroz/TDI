@@ -30,6 +30,8 @@ urlpatterns = [
     path('preguntas-frecuentes/', pPreguntas, name="preguntas-frecuentes"),
     path('terminos-y-condiciones/', pTerminos, name="terminos-y-condiciones"),
     path('politicas-de-privacidad/', pPoliticas, name="politicas-de-privacidad"),
+    path('dictar-workshop/', pDictarWorkshop, name="dictar-workshop"),
+    path('dictar-curso/', pDictarCurso, name="dictar-curso"),
     #Cursos
     path('cursos/', pCursos, name="cursos"),
     path('cursos/mern/', pMern, name="mern"),
