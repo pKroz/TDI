@@ -113,3 +113,13 @@ class dictar_curso(models.Model):
     dia = models.CharField(max_length=4)
     mes = models.CharField(max_length=4)
     anio = models.CharField(max_length=4)
+
+class certificados(models.Model):
+    codigo = models.CharField(max_length=5000)
+    dni = models.CharField(max_length=5000, blank=True, null=True)
+    nombres = models.CharField(max_length=5000)
+    apellidos = models.CharField(max_length=5000)
+    correo = models.CharField(max_length=5000, blank=True, null=True)
+    celular = models.CharField(max_length=5000, blank=True, null=True)
+    certificado = models.CharField(max_length=5000)
+    temaPropuesto = models.CharField(max_length=5000)

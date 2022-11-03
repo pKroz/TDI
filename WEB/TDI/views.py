@@ -4,11 +4,17 @@ from django.template.loader import *
 from django.template import *
 from django.http import *
 from django.contrib import messages
+from django.db.models import Q
 import datetime
 # Create your views here.
 def inicio(request):
     testimoniosListados = testimonios.objects.all()[:9]
     return render(request,"inicio.html", {"testimonios": testimoniosListados})
+
+def pCertificados(request):
+    busqueda = request.GET.get('buscar')
+    certificadosListados = certificados.objects.all().filter(codigo=busqueda)
+    return render(request,"certificados.html", {"certificados":certificadosListados})
 
 def pCursos(request):
     cursosListados = cursos.objects.all()

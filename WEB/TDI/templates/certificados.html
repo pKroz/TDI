@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Certificados {% endblock %}
+{% block content %}
+{% include "menu.html" %}
+<link rel="stylesheet" href='{% static "css/certificado.css" %}'/>
+<script src='{% static "js/jquery.min.js" %}'></script>
+
+<h1 class="titulo espacio">Verificar Certificado</h1>
+	<section class="formulario">
+		<form method="GET" id="form-search" autocomplete="off">
+			<input name="buscar" id="inlineFormInput" type="text" placeholder="Ingrese el código de su certificado" required>
+			<input type="hidden" class="form-control mb-2" id="inlineFormInput">
+			<p>El código aparece en la parte inferior derecha del certificado.</p>
+			<input type="submit">
+        </form>
+    </section>
+    {% if certificados %}
+            {% for c in certificados %}
+                <div class="item">
+                    <div class="detalle">
+                        <h1 class='word-a'>Has buscado el código:</h1><h1 class='word-b'>{{c.codigo}}</h1>
+                        <h1 class='word-c'>Resultados Encontrados:</h1>
+                        <table class='table'>
+                        <td class='img'> 
+                            <img src="{{c.certificado}}">
+                        </td>
+                        </table>
+                        <h1 class='success'><span class='icon-ok'></span>Certificado Comprobado</h1>
+                        <p class='mensaje'>El certificado fue otorgado y verificado por TDIPERÚ y toda su informacion es válida.</p>
+                    </div>
+                </div>
+            {% endfor %}
+    {% else %}
+    <div class="item">
+        <div class="detalle">
+            <h1 class='fail'>No se encontró resultados</h1>
+        </div>
+    </div>
+    {% endif %}
+<script type="text/javascript">
+    function mostrar(){
+        document.getElementByID('consulta').style.display = 'block';
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src='{% static "js/menu.js" %}'></script>
+<script src='{% static "js/popper.min.js" %}'></script>  
+{% endblock %}

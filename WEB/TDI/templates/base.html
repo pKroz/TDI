@@ -11,8 +11,9 @@
 <body>
     {% block content %}
     {% endblock %}
-	{% include "pie.html" %}
+	
 </body>
+
 <script src='{% static "js/menu.js" %}'></script>
 <script src='{% static "js/sheetslider.min.js" %}'></script>
 <script src='{% static "js/swiper-bundle.min.js" %}'></script>
@@ -41,6 +42,7 @@
       },
     });
 </script>
+
 <script type="text/javascript">
     $(document).ready(function(){
       $('.sub-btn').click(function(){
@@ -57,4 +59,5 @@
       });
     });
 </script>
+{% include "pie.html" %}
 </html>
