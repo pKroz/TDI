@@ -5,19 +5,19 @@
             <h2>Empresa</h2>
             <a href="{% url 'nosotros' %}">Sobre TDI Perú</a>
             <a href="{% url 'trabaja-con-nosotros' %}">Trabaja con Nosotros</a>
-            <a href="dicta-curso.php">Dicta un Curso o Webinar</a>
-            <a href="dicta-workshop.php">Dicta un Workshop</a>
+            <a href="{% url 'dictar-curso' %}">Dicta un Curso o Webinar</a>
+            <a href="{% url 'dictar-workshop' %}">Dicta un Workshop</a>
         </div>
         <div class="colum">
             <h2>Novedades</h2>
-            <a href="becas.php">Becas</a>
+            <a href="{% url 'becas' %}">Becas</a>
             <a href="{% url 'blogs' %}">Blog</a>
             <a>Recursos</a>
             <a class="parpadeo">Lives</a>
         </div>
         <div class="colum">
             <h2>Enlaces de Ayuda</h2>
-            <a href="comunidad.php">Comunidad TDI Perú</a>
+            <a href="{% url 'comunidad' %}">Comunidad TDI Perú</a>
             <a href="{% url 'politicas-de-privacidad' %}">Políticas de Privacidad</a>
             <a href="{% url 'terminos-y-condiciones' %}">Términos y Condiciones</a>
             <a href="{% url 'preguntas-frecuentes' %}">Preguntas Frecuentes</a>
@@ -30,7 +30,7 @@
     </div>
     <div class="seccion-b">
         <div class="item-a">
-            <a href="https://tdiperu.com">
+            <a href="{% url 'inicio' %}">
                 <img src="{% static 'img/logo/0002.png' %}" alt="Logotipo de TDI Perú">
                 <h1>TDI Perú</h1>
             </a>

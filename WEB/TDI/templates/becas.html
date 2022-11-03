@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Gracias {% endblock %}
+{% block content %}
+{% include "menu.html" %}
+<link rel="stylesheet" href='{% static "css/dictar.css" %}'/>
+<script src='{% static "js/jquery.min.js" %}'></script>
+<h1 class="titulo espacio">Becas</h1>
+    <section class="contenido">
+        <div class="seccion-a">
+            <h1>Proximamente sortearemos becas para cursos y webinars!</h1>
+            <h1>Quédate atento y sé uno de los beneficiados.</h1>
+            <h1>No olvides seguirnos en nuestras redes sociales para aumentar tus posibilidades de ganar.</h1>
+            <h3>TDI Perú</h3>
+            <h2>Desarrolla tus habilidades</h2>
+        </div>
+        <div class="seccion-b">
+            <img src="{% static 'img/etc/svg/0016.svg' %}" alt="Imagen de Becas en TDI Perú">
+        </div>
+    </section>
+<script src='{% static "js/menu.js" %}'></script>
+<script src='{% static "js/expandir.js" %}'></script>  
+{% endblock %}

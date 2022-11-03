@@ -34,6 +34,7 @@ urlpatterns = [
     path('dictar-curso/', pDictarCurso, name="dictar-curso"),
     path('comunidad/', pComunidad, name="comunidad"),
     path('gracias/', pGracias, name="gracias"),
+    path('becas/', pBecas, name="becas"),
     #Cursos
     path('cursos/', pCursos, name="cursos"),
     path('cursos/mern/', pMern, name="mern"),

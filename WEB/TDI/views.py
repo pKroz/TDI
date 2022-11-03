@@ -93,6 +93,9 @@ def pComunidad(request):
 def pGracias(request):
     return render(request,"gracias.html", {})
 
+def pBecas(request):
+    return render(request,"becas.html", {})
+
 def pMern(request):
     cursosListados = cursos.objects.all().filter(titulo="MERN")
     if request.method =='POST':
