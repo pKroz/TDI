@@ -2,7 +2,7 @@
 
 from django.db import migrations, models
 
-
+#comentario_prueba
 class Migration(migrations.Migration):
 
     initial = True
