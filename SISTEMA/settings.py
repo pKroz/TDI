@@ -26,7 +26,7 @@ SECRET_KEY = 'r%f%!de6_j-vuqrbm&0c@8@5(nkub)9ud5!8#$&w4=gq)obpi$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','3.129.218.207','tdiperu.com']
+ALLOWED_HOSTS = ['localhost','3.129.218.207','tdiperu.com','*']
 
 
 # Application definition
